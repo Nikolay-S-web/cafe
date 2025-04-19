@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+}
+.icon {
+    fill: red;
+}
+
+::placeholder {
+    color: gray;
+}

@@ -1,0 +1,30 @@
+{
+    "name": "cafe",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "author": "N. Senchenko",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "deploy": "gh-pages -d dist"
+    },
+    "devDependencies": {
+        "@spiriit/vite-plugin-svg-spritemap": "^4.0.1",
+        "gh-pages": "^6.3.0",
+        "sass": "^1.86.3",
+        "svgo": "^3.3.2",
+        "vite": "^6.3.1",
+        "vite-plugin-minify": "^2.1.0"
+    },
+    "browserslist": [
+        "> 0.5%",
+        "last 4 versions"
+    ],
+    "dependencies": {
+        "autoprefixer": "^10.4.21",
+        "reset-css": "^5.0.2",
+        "vite-plugin-babel": "^1.3.0"
+    }
+}
