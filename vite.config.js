@@ -21,7 +21,7 @@ export default defineConfig({
         sourcemap: true,
     },
     plugins: [
-        VitePluginSvgSpritemap('./src/assets/images/icons/*.svg'),
+        VitePluginSvgSpritemap('./src/assets/images/SVG/*.svg'),
         htmlPurge(),
         ViteMinifyPlugin(),
         legacy(),
