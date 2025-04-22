@@ -2,21 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__logo">
-      <svg>
-        <use href:xmllink=""></use>
-      </svg>
-    </div>
-  </header>
+    <header class="header">
+        <div class="header__wrapper">
+            <a href="" class="header__logo">
+                <svg class="logo">
+                    <use xlink:href="./__spritemap#sprite-logo"></use>
+                </svg>
+            </a>
+            <div class="header__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--current"><a href="" class="link">Главная</a></li>
+                    <li class="navigation__item"><a href="" class="link">Меню</a></li>
+                    <li class="navigation__item"><a href="" class="link">Контакты</a></li>
+                </ul>
+            </div>
 
-  <script type="module" src="./src/index.js"></script>
+            <a href="" class="header__shops">
+                <svg class="icon icon--basket">
+                    <use xlink:href="./__spritemap#sprite-basket2"></use>
+                </svg>
+            </a>
+            <div class="header__burger burger">
+                <div class="burger__wrapper">
+                    <div class="burger__line burger-line "></div>
+                    <div class="burger__line burger-cross">
+                        <div class="burger-cross__line burger-cross__line--first"></div>
+                        <div class="burger-cross__line burger-cross__line--second"></div>
+                    </div>
+                    <div class="burger__line burger-line"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,103 @@
+.header {
+    --headerInlinePadding: 135;
+    --headerBlockPadding: 40;
+    --headerLogoWidth: 150;
+    --headerLogoHeight: var(--headerLogoWidth) / 5;
+
+    background-color: rgb(206, 206, 206);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-block: calc(var(--rootFontPixel) * var(--headerBlockPadding));
+    transition-property: background-color, padding-block;
+    transition: 1s;
+    &.scrolled {
+        padding-block: calc(var(--rootFontPixel) * 10);
+        background-color: #f9d9aa9c;
+    }
+    &__wrapper {
+        padding-inline: calc(var(--rootFontPixel) * var(--headerInlinePadding));
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
+        & > * {
+            margin-inline: var(--adaptiveInlinePadding);
+        }
+    }
+    &__logo {
+        justify-self: start;
+        width: calc(var(--rootFontPixel) * var(--headerLogoWidth));
+        height: calc(var(--rootFontPixel) * var(--headerLogoHeight));
+    }
+    &__navigation {
+        width: 100%;
+        min-width: fit-content;
+        max-width: 60%;
+        justify-self: center;
+    }
+    &__burger {
+        display: none;
+        width: var(--adaptiveIconSize);
+        justify-self: end;
+    }
+    &__shops {
+        justify-self: end;
+        line-height: 0;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header {
+        --headerInlinePadding: 105;
+        --headerBlockPadding: 30;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        --headerInlinePadding: 50;
+        --headerBlockPadding: 20;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        --headerInlinePadding: 20;
+        --headerBlockPadding: 15;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 426px) {
+    .header {
+        --headerInlinePadding: 10;
+        --headerLogoWidth: 240;
+
+        &__shops {
+            align-self: flex-start;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        --headerLogoWidth: 200;
+        --headerInlinePadding: 5;
+        --headerInlinePadding: 5;
+
+        &__navigation {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
+        }
+
+        &__shops {
+            justify-self: center;
+            line-height: 0;
+        }
+    }
+}

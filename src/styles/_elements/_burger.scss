@@ -1,0 +1,66 @@
+$burger-line-color: gray;
+$burger-line-border-rad: 10px;
+$transition-duration: 0.5s;
+$cross-bg-color: red;
+
+.burger {
+    aspect-ratio: 1;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        row-gap: 20%;
+        perspective: 1px;
+    }
+
+    &__line {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-line {
+        border-radius: $burger-line-border-rad;
+        background-color: $burger-line-color;
+        transition: $transition-duration;
+    }
+
+    &-cross {
+        position: relative;
+        &__line {
+            width: 100%;
+            height: 100%;
+            border-radius: $burger-line-border-rad;
+            position: absolute;
+            top: 0;
+            background-color: $burger-line-color;
+            &--first,
+            &--second {
+                z-index: 1;
+                transition: $transition-duration;
+            }
+        }
+    }
+
+    &:hover {
+        .burger {
+            &-line {
+                transform: translateZ(-1px);
+                opacity: 0;
+            }
+            &-cross {
+                &__line {
+                    border-radius: unset;
+                    &--first {
+                        transform: rotate(45deg) scaleX(1.2);
+                        background-color: $cross-bg-color;
+                    }
+                    &--second {
+                        transform: rotate(-45deg) scaleX(1.2);
+                        background-color: $cross-bg-color;
+                    }
+                }
+            }
+        }
+    }
+}

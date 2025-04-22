@@ -1,2 +1,9 @@
 import 'reset-css';
+
+import './styles/_elements/_link.scss';
+import './styles/_elements/_navigation.scss';
+import './styles/_elements/_burger.scss';
+import './styles/_elements/_icons.scss';
+
 import './styles/main.scss';
+import './styles/header/header.scss';

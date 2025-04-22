@@ -1,4 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --rootFontSize: 1rem;
+    --rootFontPixel: var(--rootFontSize) / 16;
+    --inlinePadding: 15;
+    --adaptiveInlinePadding: calc(var(--rootFontPixel) * var(--inlinePadding));
+    --iconSize: 30;
+    --adaptiveIconSize: calc(var(--rootFontPixel) * var(--iconSize));
+
+    --font-family: 'Poppins', sans-serif;
+    --primaryColor: #ff902b;
+    --secondaryColor: #2f2105;
+    --accentsColor: #f9d9aa;
+    --lightColor: #7e7d7a;
+}
+
 body {
+    font-family: var(--font-family);
+    font-size: var(--rootFontSize);
+    line-height: 1.5em;
     background-color: #fff;
-    padding: 0 15px;
+    padding-inline: var(--adaptiveInlinePadding);
+}
+
+@media (max-width: 1440px) {
+    :root {
+        --inlinePadding: 12;
+    }
+}
+@media (max-width: 1024px) {
+    :root {
+        --inlinePadding: 10;
+    }
+}
+@media (max-width: 768px) {
+    :root {
+        --rootFontSize: 0.8rem;
+        --inlinePadding: 8;
+    }
+}
+@media (max-width: 425px) {
+    :root {
+        --inlinePadding: 5;
+    }
 }
