@@ -4,6 +4,7 @@ import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 import autoprefixer from 'autoprefixer';
 import babelPlugin from 'vite-plugin-babel';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig({
     base: './',
@@ -18,7 +19,7 @@ export default defineConfig({
             },
         },
     },
-    plugins: [VitePluginSvgSpritemap('./images/icons/*.svg'), babelPlugin(), ViteMinifyPlugin({})],
+    plugins: [VitePluginSvgSpritemap('./images/icons/*.svg'), babelPlugin(), ViteMinifyPlugin({}), legacy()],
     css: {
         postcss: {
             plugins: [
