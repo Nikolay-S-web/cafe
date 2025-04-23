@@ -1,13 +1,11 @@
-%wrapper {
-    max-width: var(--adaptiveContentMaxWidth);
-    margin: 0 auto;
-}
-
 :root {
     --rootFontSize: 1rem;
     --rootFontPixel: var(--rootFontSize) / 16;
     --inlinePadding: 15;
     --adaptiveInlinePadding: calc(var(--rootFontPixel) * var(--inlinePadding));
+    --inlineWrapperPadding: 135;
+    --adaptiveInlineWrapperPadding: calc(var(--rootFontPixel) * var(--inlineWrapperPadding));
+
     --iconSize: 30;
     --adaptiveIconSize: calc(var(--rootFontPixel) * var(--iconSize));
 
@@ -22,31 +20,53 @@
     --secondBgColor: #f6ebda;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+%wrapper {
+    max-width: var(--adaptiveContentMaxWidth);
+    padding-inline: var(--adaptiveInlineWrapperPadding);
+    margin: 0 auto;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--rootFontSize);
     line-height: 1.5em;
     background-color: #fff;
+
+    margin-bottom: 200px;
 }
 
 @media (max-width: 1440px) {
     :root {
+        --inlineWrapperPadding: 105;
         --inlinePadding: 12;
     }
 }
 @media (max-width: 1024px) {
     :root {
         --inlinePadding: 10;
+        --inlineWrapperPadding: 50;
     }
 }
 @media (max-width: 768px) {
     :root {
         --rootFontSize: 0.8rem;
         --inlinePadding: 8;
+        --inlineWrapperPadding: 20;
     }
 }
+@media (max-width: 600px) {
+    .header {
+        --inlineWrapperPadding: 10;
+    }
+}
+
 @media (max-width: 425px) {
     :root {
         --inlinePadding: 5;
+        --inlineWrapperPadding: 5;
     }
 }

@@ -1,0 +1,11 @@
+.popular-goods {
+    --inlinePadding: 64px;
+    --AdaptiveInlinePadding: calc(var(--rootFontPixel) * var(--inlinePadding));
+
+    padding-inline: var(--AdaptiveInlinePadding);
+    background-image: url('/__spritemap#sprite-popularGoodsBg-view');
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    padding-inline: 64px;
+    padding-block: 86px;
+}

@@ -1,26 +1,29 @@
 .header {
-    --headerInlinePadding: 135;
-    --headerBlockPadding: 40;
-    --headerLogoWidth: 150;
-    --headerLogoHeight: var(--headerLogoWidth) / 5;
-    --adaptiveGap: calc(var(--adaptiveInlinePadding) * 2);
-    --headerBgColor: #f9d9aa9c;
+    --BgColor: #f9d9aa9c;
+    --blockPadding: 40;
+    --adaptiveBlockPadding: calc(var(--rootFontPixel) * var(--blockPadding));
+    --logoWidth: 150;
+    --adaptiveLogoWidth: calc(var(--rootFontPixel) * var(--logoWidth));
+    --logoHeight: var(--logoWidth) / 5;
+    --adaptiveLogoHeight: calc(var(--rootFontPixel) * var(--logoHeight));
+    --adaptiveGap: calc(var(--adaptiveInlineWrapperPadding) * 2);
 
-    position: relative;
+    display: none;
+
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    padding-block: calc(var(--rootFontPixel) * var(--headerBlockPadding));
+    padding-block: var(--adaptiveBlockPadding);
+    transition: 0.5s;
 
     &.scrolled {
-        padding-block: calc(var(--rootFontPixel) * 10);
-        background-color: var(--headerBgColor);
+        padding-block: var(--adaptiveBlockPadding);
+        background-color: var(--BgColor);
     }
 
     &__wrapper {
         @extend %wrapper;
-        padding-inline: calc(var(--rootFontPixel) * var(--headerInlinePadding));
         display: grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
@@ -30,8 +33,8 @@
     }
     &__logo {
         justify-self: start;
-        width: calc(var(--rootFontPixel) * var(--headerLogoWidth));
-        height: calc(var(--rootFontPixel) * var(--headerLogoHeight));
+        width: var(--adaptiveLogoWidth);
+        height: var(--adaptiveLogoHeight);
     }
     &__navigation {
         width: 100%;
@@ -52,29 +55,25 @@
 
 @media (max-width: 1440px) {
     .header {
-        --headerInlinePadding: 105;
-        --headerBlockPadding: 30;
+        --blockPadding: 30;
     }
 }
 
 @media (max-width: 1024px) {
     .header {
-        --headerInlinePadding: 50;
-        --headerBlockPadding: 20;
+        --blockPadding: 20;
     }
 }
 
 @media (max-width: 768px) {
     .header {
-        --headerInlinePadding: 20;
-        --headerBlockPadding: 15;
+        --blockPadding: 15;
     }
 }
 
 @media (max-width: 600px) and (min-width: 426px) {
     .header {
-        --headerInlinePadding: 10;
-        --headerLogoWidth: 240;
+        --logoWidth: 240;
 
         &__shops {
             align-self: flex-start;
@@ -84,10 +83,8 @@
 
 @media (max-width: 425px) {
     .header {
-        --headerLogoWidth: 200;
-        --headerInlinePadding: 5;
-        --headerInlinePadding: 5;
-        background-color: var(--headerBgColor);
+        --logoWidth: 200;
+        background-color: var(--BgColor);
         transition: 0.5s;
 
         &__wrapper {
@@ -95,7 +92,7 @@
         }
 
         &__navigation {
-            background-color: var(--headerBgColor);
+            background-color: var(--BgColor);
             position: absolute;
             width: 100dvw;
             max-width: unset;
@@ -112,10 +109,5 @@
         &__burger {
             display: block;
         }
-
-        // &__shops {
-        //     justify-self: center;
-        //     line-height: 0;
-        // }
     }
 }

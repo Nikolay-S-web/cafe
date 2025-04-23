@@ -1,12 +1,74 @@
 .promo {
-    --promoPaddingTop: 158;
-    --adaptivePromoPaddingTop: calc(var(--rootFontPixel) * var(--promoPaddingTop));
-    --promoBgColor: var(--secondBgColor);
+    --inlinePadding: 135;
+    --blockPadding: 40;
+    --buttonWidth: 150;
+    --buttonHeight: var(--logoWidth) / 5;
+    --adaptiveGap: calc(var(--adaptiveInlinePadding) * 2);
+    --BgColor: #f9d9aa9c;
+    --paddingTop: 160;
+    --adaptivePaddingTop: calc(var(--rootFontPixel) * var(--paddingTop));
+    --bgColor: var(--secondBgColor);
 
-    background-color: var(--promoBgColor);
+    background-color: var(--bgColor);
+    background-image: url('/src/styles/content/promo/bg_right.png'), url('/src/styles/content/promo/bg_left.png');
+    background-repeat: no-repeat;
+    background-position: right 16% top, left 18% bottom 5%;
 
     &__wrapper {
+        position: relative;
         @extend %wrapper;
-        padding-top: var(--adaptivePromoPaddingTop);
+        padding-top: var(--adaptivePaddingTop);
+        padding-bottom: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        row-gap: 142px;
+    }
+
+    &__intro {
+        max-width: 490px;
+    }
+    &-intro {
+        display: grid;
+        gap: 24px;
+        align-content: center;
+        &__order {
+            margin-top: 8px;
+        }
+        &-order {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            &__button {
+                width: 170px;
+                height: 46px;
+            }
+            &__link {
+                padding: 10px 24px;
+            }
+        }
+    }
+
+    &__bestseller {
+        max-width: calc(var(--rootFontPixel) * 570);
+        position: relative;
+        right: -28px;
+    }
+
+    &-bestseller {
+        &__item {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__popular {
+        left: 0;
+        right: 0;
+        margin-inline: 86px;
+        width: 1268px;
+        position: absolute;
+        top: 74%;
     }
 }
