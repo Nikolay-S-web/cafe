@@ -1,6 +1,8 @@
-* {
-    box-sizing: border-box;
+%wrapper {
+    max-width: var(--adaptiveContentMaxWidth);
+    margin: 0 auto;
 }
+
 :root {
     --rootFontSize: 1rem;
     --rootFontPixel: var(--rootFontSize) / 16;
@@ -9,11 +11,15 @@
     --iconSize: 30;
     --adaptiveIconSize: calc(var(--rootFontPixel) * var(--iconSize));
 
+    --contentMaxWidth: 1440;
+    --adaptiveContentMaxWidth: calc(var(--rootFontPixel) * var(--contentMaxWidth));
+
     --font-family: 'Poppins', sans-serif;
     --primaryColor: #ff902b;
     --secondaryColor: #2f2105;
     --accentsColor: #f9d9aa;
     --lightColor: #7e7d7a;
+    --secondBgColor: #f6ebda;
 }
 
 body {
@@ -21,7 +27,6 @@ body {
     font-size: var(--rootFontSize);
     line-height: 1.5em;
     background-color: #fff;
-    padding-inline: var(--adaptiveInlinePadding);
 }
 
 @media (max-width: 1440px) {

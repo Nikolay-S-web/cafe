@@ -3,26 +3,27 @@
     --headerBlockPadding: 40;
     --headerLogoWidth: 150;
     --headerLogoHeight: var(--headerLogoWidth) / 5;
+    --adaptiveGap: calc(var(--adaptiveInlinePadding) * 2);
+    --headerBgColor: #f9d9aa9c;
 
-    background-color: rgb(206, 206, 206);
+    position: relative;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     padding-block: calc(var(--rootFontPixel) * var(--headerBlockPadding));
-    transition-property: background-color, padding-block;
-    transition: 1s;
+
     &.scrolled {
         padding-block: calc(var(--rootFontPixel) * 10);
-        background-color: #f9d9aa9c;
+        background-color: var(--headerBgColor);
     }
+
     &__wrapper {
+        @extend %wrapper;
         padding-inline: calc(var(--rootFontPixel) * var(--headerInlinePadding));
         display: grid;
         grid-template-columns: auto 1fr auto;
         align-items: center;
-        max-width: 1440px;
-        margin: 0 auto;
         & > * {
             margin-inline: var(--adaptiveInlinePadding);
         }
@@ -86,18 +87,35 @@
         --headerLogoWidth: 200;
         --headerInlinePadding: 5;
         --headerInlinePadding: 5;
+        background-color: var(--headerBgColor);
+        transition: 0.5s;
+
+        &__wrapper {
+            gap: var(--adaptiveGap);
+        }
 
         &__navigation {
-            display: none;
+            background-color: var(--headerBgColor);
+            position: absolute;
+            width: 100dvw;
+            max-width: unset;
+            top: 100%;
+            transform-origin: center top;
+            transform: scaleY(0);
+            transition: 0.5s;
+
+            &.active {
+                transform: scaleY(1);
+            }
         }
 
         &__burger {
             display: block;
         }
 
-        &__shops {
-            justify-self: center;
-            line-height: 0;
-        }
+        // &__shops {
+        //     justify-self: center;
+        //     line-height: 0;
+        // }
     }
 }

@@ -1,0 +1,12 @@
+.promo {
+    --promoPaddingTop: 158;
+    --adaptivePromoPaddingTop: calc(var(--rootFontPixel) * var(--promoPaddingTop));
+    --promoBgColor: var(--secondBgColor);
+
+    background-color: var(--promoBgColor);
+
+    &__wrapper {
+        @extend %wrapper;
+        padding-top: var(--adaptivePromoPaddingTop);
+    }
+}

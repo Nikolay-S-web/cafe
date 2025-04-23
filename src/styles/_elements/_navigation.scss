@@ -16,19 +16,37 @@
     }
 }
 
-@media (max-width: 600px) and (min-width: 426px) {
+@media (max-width: 600px) {
     .navigation {
         &__list {
             flex-direction: column;
         }
         &__item {
             padding-block: var(--adaptiveInlinePadding);
+        }
+    }
+}
+
+@media (max-width: 600px) and (min-width: 426px) {
+    .navigation {
+        &__item {
             &:first-child {
                 align-self: start;
             }
             &:last-child {
                 align-self: end;
             }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .navigation {
+        &__list {
+            align-items: end;
+        }
+        &__item {
+            padding-right: calc(var(--adaptiveInlinePadding) * 8);
         }
     }
 }

@@ -1,9 +1,11 @@
-$burger-line-color: gray;
 $burger-line-border-rad: 10px;
 $transition-duration: 0.5s;
 $cross-bg-color: red;
 
 .burger {
+    background-color: unset;
+    border: unset;
+    padding: 5%;
     aspect-ratio: 1;
 
     &__wrapper {
@@ -21,7 +23,7 @@ $cross-bg-color: red;
 
     &-line {
         border-radius: $burger-line-border-rad;
-        background-color: $burger-line-color;
+        background-color: var(--primaryColor);
         transition: $transition-duration;
     }
 
@@ -33,7 +35,7 @@ $cross-bg-color: red;
             border-radius: $burger-line-border-rad;
             position: absolute;
             top: 0;
-            background-color: $burger-line-color;
+            background-color: var(--primaryColor);
             &--first,
             &--second {
                 z-index: 1;
@@ -42,7 +44,7 @@ $cross-bg-color: red;
         }
     }
 
-    &:hover {
+    &.active {
         .burger {
             &-line {
                 transform: translateZ(-1px);
