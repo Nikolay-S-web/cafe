@@ -1,0 +1,15 @@
+.icon-box {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--primaryColor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    .icon {
+        height: 50%;
+    }
+}

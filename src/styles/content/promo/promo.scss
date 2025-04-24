@@ -69,6 +69,13 @@
         margin-inline: 86px;
         width: 1268px;
         position: absolute;
-        top: 74%;
+        top: 65%;
+    }
+
+    &-popular {
+        &__title {
+            padding-inline: 50px;
+            margin-block: 32px;
+        }
     }
 }

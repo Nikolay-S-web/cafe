@@ -1,0 +1,74 @@
+.card {
+    &--popular {
+        border-radius: 12px;
+        border: 6px solid transparent;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 100%);
+        background-clip: border-box;
+        background-origin: border-box;
+    }
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background-color: #fff;
+        max-width: 355px;
+        max-height: 385px;
+        padding-top: 22px;
+        padding-inline: 18px;
+        padding-bottom: 19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    &__image_box {
+        flex: 0 0 min;
+        grid-column: span 2;
+        position: relative;
+        border-radius: 12px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &-image_box {
+        aspect-ratio: 1.35;
+        &__good_image {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &__rating {
+            position: absolute;
+            top: 3%;
+            left: 3%;
+        }
+    }
+
+    &__description {
+        padding-inline: 14px;
+        flex-shrink: 0;
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &-description {
+        &__mods {
+        }
+        &-mods {
+            display: flex;
+            gap: 24px;
+            &__item {
+                flex-shrink: 0;
+                border: 2px solid var(--primaryColor);
+                border-radius: 8px;
+                padding-inline: 17px;
+                padding-block: 4px;
+            }
+        }
+    }
+}

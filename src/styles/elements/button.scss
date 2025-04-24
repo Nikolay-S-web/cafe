@@ -1,20 +1,26 @@
 .button {
-    border-radius: 33px;
-    padding: 12px 32px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 4px 32px 0 rgba(223, 195, 124, 0.25);
-    background: var(--secondaryColor);
-    justify-content: space-between;
-    & > * {
-        flex-shrink: 0;
+    cursor: pointer;
+
+    &--style_unset {
+        border: unset;
+        background-color: unset;
+        padding: 0;
+        margin: 0;
     }
-    &__text {
-        font-weight: 600;
-        font-size: 14px;
-        text-align: center;
-        color: #fff;
+
+    &--style_main {
+        border-radius: 33px;
+        padding: 12px 32px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 32px 0 rgba(223, 195, 124, 0.25);
+        background: var(--secondaryColor);
+        justify-content: space-between;
+        & > * {
+            flex-shrink: 0;
+        }
     }
+
     &__icon-box {
         width: 22px;
         height: 22px;
