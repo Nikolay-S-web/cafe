@@ -1,5 +1,5 @@
 .navigation {
-    font-size: calc(var(--rootFontPixel) * 18);
+    font-size: 18px;
     &__list {
         display: flex;
         justify-content: space-between;
@@ -8,7 +8,7 @@
     }
 
     &__item {
-        padding-inline: var(--adaptiveInlinePadding);
+        padding-inline: var(--inlinePadding);
         flex-shrink: 1;
         &--current {
             color: var(--primaryColor);
@@ -22,7 +22,7 @@
             flex-direction: column;
         }
         &__item {
-            padding-block: var(--adaptiveInlinePadding);
+            padding-block: var(--inlinePadding);
         }
     }
 }
@@ -46,7 +46,7 @@
             align-items: end;
         }
         &__item {
-            padding-right: calc(var(--adaptiveInlinePadding) * 8);
+            padding-right: calc(var(--inlinePadding) * 8);
         }
     }
 }

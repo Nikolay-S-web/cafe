@@ -1,12 +1,10 @@
 .promo {
-    --inlinePadding: 135;
-    --blockPadding: 40;
-    --buttonWidth: 150;
+    --blockPadding: 40px;
+    --buttonWidth: 150px;
     --buttonHeight: var(--logoWidth) / 5;
-    --adaptiveGap: calc(var(--adaptiveInlinePadding) * 2);
+    --gap: calc(var(--inlinePadding) * 2);
     --BgColor: #f9d9aa9c;
-    --paddingTop: 160;
-    --adaptivePaddingTop: calc(var(--rootFontPixel) * var(--paddingTop));
+    --paddingTop: 160px;
     --bgColor: var(--secondBgColor);
 
     background-color: var(--bgColor);
@@ -17,7 +15,7 @@
     &__wrapper {
         position: relative;
         @extend %wrapper;
-        padding-top: var(--adaptivePaddingTop);
+        padding-top: var(--paddingTop);
         padding-bottom: 400px;
         display: flex;
         flex-wrap: wrap;
@@ -51,7 +49,7 @@
     }
 
     &__bestseller {
-        max-width: calc(var(--rootFontPixel) * 570);
+        max-width: 570px;
         position: relative;
         right: -28px;
     }

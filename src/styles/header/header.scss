@@ -1,24 +1,23 @@
 .header {
-    --BgColor: #f9d9aa9c;
-    --blockPadding: 40;
-    --adaptiveBlockPadding: calc(var(--rootFontPixel) * var(--blockPadding));
-    --logoWidth: 150;
-    --adaptiveLogoWidth: calc(var(--rootFontPixel) * var(--logoWidth));
-    --logoHeight: var(--logoWidth) / 5;
-    --adaptiveLogoHeight: calc(var(--rootFontPixel) * var(--logoHeight));
-    --adaptiveGap: calc(var(--adaptiveInlineWrapperPadding) * 2);
+    --BgColor: #ffd5969c;
+    --blockPadding: 40px;
+    --scrolledBlockPadding: 20px;
+    --logoWidth: 150px;
+    --logoHeight: calc(var(--logoWidth) / 5);
+    --gap: calc(var(--inlinePadding) * 2);
 
-    display: none;
+    // display: none;
 
     position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     left: 0;
-    padding-block: var(--adaptiveBlockPadding);
+    padding-block: var(--blockPadding);
     transition: 0.5s;
 
     &.scrolled {
-        padding-block: var(--adaptiveBlockPadding);
+        padding-block: calc(var(--blockPadding) / 2);
         background-color: var(--BgColor);
     }
 
@@ -28,13 +27,13 @@
         grid-template-columns: auto 1fr auto;
         align-items: center;
         & > * {
-            margin-inline: var(--adaptiveInlinePadding);
+            margin-inline: var(--inlinePadding);
         }
     }
     &__logo {
         justify-self: start;
-        width: var(--adaptiveLogoWidth);
-        height: var(--adaptiveLogoHeight);
+        width: var(--logoWidth);
+        height: var(--logoHeight);
     }
     &__navigation {
         width: 100%;
@@ -44,7 +43,7 @@
     }
     &__burger {
         display: none;
-        width: var(--adaptiveIconSize);
+        width: var(--iconSize);
         justify-self: end;
     }
     &__shops {
@@ -88,7 +87,7 @@
         transition: 0.5s;
 
         &__wrapper {
-            gap: var(--adaptiveGap);
+            gap: var(--gap);
         }
 
         &__navigation {

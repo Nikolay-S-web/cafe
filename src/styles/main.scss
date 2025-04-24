@@ -1,16 +1,12 @@
 :root {
     --rootFontSize: 1rem;
-    --rootFontPixel: var(--rootFontSize) / 16;
-    --inlinePadding: 15;
-    --adaptiveInlinePadding: calc(var(--rootFontPixel) * var(--inlinePadding));
-    --inlineWrapperPadding: 135;
-    --adaptiveInlineWrapperPadding: calc(var(--rootFontPixel) * var(--inlineWrapperPadding));
 
-    --iconSize: 30;
-    --adaptiveIconSize: calc(var(--rootFontPixel) * var(--iconSize));
+    --inlinePadding: 15px;
+    --inlineWrapperPadding: 135px;
 
-    --contentMaxWidth: 1440;
-    --adaptiveContentMaxWidth: calc(var(--rootFontPixel) * var(--contentMaxWidth));
+    --iconSize: 30px;
+
+    --contentMaxWidth: 1440px;
 
     --font-family: 'Poppins', sans-serif;
     --primaryColor: #ff902b;
@@ -18,6 +14,8 @@
     --accentsColor: #f9d9aa;
     --lightColor: #7e7d7a;
     --secondBgColor: #f6ebda;
+
+    font-size: var(--rootFontSize);
 }
 
 * {
@@ -25,14 +23,14 @@
 }
 
 %wrapper {
-    max-width: var(--adaptiveContentMaxWidth);
-    padding-inline: var(--adaptiveInlineWrapperPadding);
+    max-width: var(--contentMaxWidth);
+    padding-inline: var(--inlineWrapperPadding);
     margin: 0 auto;
 }
 
 body {
     font-family: var(--font-family);
-    font-size: var(--rootFontSize);
+    font-size: 16px;
     line-height: 1.5em;
     background-color: #fff;
 
@@ -41,32 +39,32 @@ body {
 
 @media (max-width: 1440px) {
     :root {
-        --inlineWrapperPadding: 105;
-        --inlinePadding: 12;
+        --inlineWrapperPadding: 105px;
+        --inlinePadding: 12px;
     }
 }
 @media (max-width: 1024px) {
     :root {
-        --inlinePadding: 10;
-        --inlineWrapperPadding: 50;
+        --inlinePadding: 10px;
+        --inlineWrapperPadding: 50px;
     }
 }
 @media (max-width: 768px) {
     :root {
         --rootFontSize: 0.8rem;
-        --inlinePadding: 8;
-        --inlineWrapperPadding: 20;
+        --inlinePadding: 8px;
+        --inlineWrapperPadding: 20px;
     }
 }
 @media (max-width: 600px) {
     .header {
-        --inlineWrapperPadding: 10;
+        --inlineWrapperPadding: 10px;
     }
 }
 
 @media (max-width: 425px) {
     :root {
-        --inlinePadding: 5;
-        --inlineWrapperPadding: 5;
+        --inlinePadding: 5px;
+        --inlineWrapperPadding: 5px;
     }
 }

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
 import htmlPurge from 'vite-plugin-purgecss';
 import autoprefixer from 'autoprefixer';
+import pxtorem from 'postcss-pxtorem';
 import legacy from '@vitejs/plugin-legacy';
 import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
@@ -63,6 +64,16 @@ export default defineConfig({
             plugins: [
                 autoprefixer({
                     grid: 'autoplace',
+                }),
+                pxtorem({
+                    rootValue: 16,
+                    unitPrecision: 5,
+                    propList: ['*'],
+                    selectorBlackList: [],
+                    replace: true,
+                    mediaQuery: false,
+                    minPixelValue: 0,
+                    exclude: /node_modules/i,
                 }),
             ],
         },

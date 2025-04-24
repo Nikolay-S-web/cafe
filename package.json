@@ -24,6 +24,7 @@
         "@sentry/vite-plugin": "^3.3.1",
         "@vitejs/plugin-legacy": "^6.1.0",
         "autoprefixer": "^10.4.21",
+        "postcss-pxtorem": "^6.1.0",
         "reset-css": "^5.0.2",
         "vite-plugin-html": "^3.2.2",
         "vite-plugin-minify": "^2.1.0",
