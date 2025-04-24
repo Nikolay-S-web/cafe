@@ -7,5 +7,24 @@
     background-position: 50% bottom;
     padding-bottom: 86px;
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: space-around;
+
+    @media (max-width: 1440px) {
+        padding-inline: 40px;
+        padding-bottom: 50px;
+    }
+    @media (max-width: 1024px) {
+        padding-inline: 20px;
+        padding-bottom: 25px;
+    }
+
+    &__card {
+        min-width: 30%;
+        @media (max-width: 768px) {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
 }

@@ -17,5 +17,8 @@
         letter-spacing: 0.04em;
         text-align: center;
         color: var(--primaryColor);
+        @media (max-width: 1024px) {
+            font-size: 12px;
+        }
     }
 }

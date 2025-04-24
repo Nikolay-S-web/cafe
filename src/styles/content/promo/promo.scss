@@ -1,36 +1,56 @@
 .promo {
-    --blockPadding: 40px;
-    --buttonWidth: 150px;
-    --buttonHeight: var(--logoWidth) / 5;
     --gap: calc(var(--inlinePadding) * 2);
-    --BgColor: #f9d9aa9c;
     --paddingTop: 160px;
     --bgColor: var(--secondBgColor);
 
     background-color: var(--bgColor);
-    background-image: url('/src/styles/content/promo/bg_right.png'), url('/src/styles/content/promo/bg_left.png');
-    background-repeat: no-repeat;
-    background-position: right 16% top, left 18% bottom 5%;
+    position: relative;
 
     &__wrapper {
-        position: relative;
-        @extend %wrapper;
-        padding-top: var(--paddingTop);
-        padding-bottom: 400px;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-between;
-        row-gap: 142px;
+        &--top {
+            @extend %wrapper;
+            padding-top: var(--paddingTop);
+            padding-bottom: 388px;
+            background-image: url('/src/styles/content/promo/bg_right.png');
+            background-repeat: no-repeat;
+            background-position: right 4px top;
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+
+            @media (max-width: 1440px) {
+            }
+        }
+        &--bottom {
+            position: absolute;
+            bottom: -26%;
+            right: 0;
+            left: 0;
+            width: 100%;
+            display: flow-root;
+            @media (max-width: 1024px) {
+                bottom: -18%;
+            }
+        }
     }
 
     &__intro {
+        flex-shrink: 0;
         max-width: 490px;
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
     }
     &-intro {
         display: grid;
         gap: 24px;
         align-content: center;
+        &__title,
+        &__text {
+            mix-blend-mode: luminosity;
+            text-combine-upright: all;
+            text-shadow: 0 0 4px var(--bgColor);
+        }
         &__order {
             margin-top: 8px;
         }
@@ -49,28 +69,36 @@
     }
 
     &__bestseller {
-        max-width: 570px;
-        position: relative;
-        right: -28px;
-    }
+        flex-shrink: 1;
 
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
     &-bestseller {
         &__item {
             width: 100%;
+            max-width: 570px;
             object-fit: contain;
         }
     }
 
     &__popular {
-        left: 0;
-        right: 0;
-        margin-inline: 86px;
-        width: 1268px;
-        position: absolute;
-        top: 65%;
+        padding-top: 84px;
+        padding-inline: 86px;
+        margin-inline: auto;
+        max-width: var(--contentMaxWidth);
+
+        @media (max-width: 1440px) {
+            padding-inline: 40px;
+        }
     }
 
     &-popular {
+        background-image: url('/src/styles/content/promo/bg_left.png');
+        background-repeat: no-repeat;
+        background-position: left 4px top;
+        display: flow-root;
         &__title {
             padding-inline: 50px;
             margin-block: 32px;

@@ -14,5 +14,21 @@
     &--good {
         font-size: 24px;
         letter-spacing: 0.04em;
+        @media (max-width: 1024px) {
+            font-size: 20px;
+        }
     }
+
+    //     &__svg {
+    //         width: min-content;
+    //         height: fit-content;
+    //         & .svg_text {
+    //             font-family: inherit;
+    //             font-weight: 600;
+    //             font-size: 48px;
+    //             fill: black;
+    //             stroke: var(--bgColor);
+    //             stroke-width: 1px;
+    //         }
+    //     }
 }

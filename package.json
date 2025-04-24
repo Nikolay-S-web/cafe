@@ -6,6 +6,7 @@
     "author": "N. Senchenko",
     "scripts": {
         "dev": "vite",
+        "devH": "vite --host",
         "build": "vite build",
         "preview": "vite preview"
     },

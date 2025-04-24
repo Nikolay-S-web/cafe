@@ -34,24 +34,26 @@ body {
     line-height: 1.5em;
     background-color: #fff;
 
-    margin-bottom: 200px;
+    margin-bottom: 1000px;
+    overflow-x: hidden;
 }
 
 @media (max-width: 1440px) {
     :root {
-        --inlineWrapperPadding: 105px;
+        --inlineWrapperPadding: 90px;
         --inlinePadding: 12px;
     }
 }
 @media (max-width: 1024px) {
     :root {
+        --iconSize: 26px;
+
         --inlinePadding: 10px;
         --inlineWrapperPadding: 50px;
     }
 }
 @media (max-width: 768px) {
     :root {
-        --rootFontSize: 0.8rem;
         --inlinePadding: 8px;
         --inlineWrapperPadding: 20px;
     }

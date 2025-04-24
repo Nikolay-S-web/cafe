@@ -71,7 +71,7 @@ export default defineConfig({
                     propList: ['*'],
                     selectorBlackList: [],
                     replace: true,
-                    mediaQuery: false,
+                    mediaQuery: true,
                     minPixelValue: 0,
                     exclude: /node_modules/i,
                 }),
