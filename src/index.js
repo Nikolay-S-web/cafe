@@ -1,5 +1,7 @@
 import 'reset-css';
 
+import './styles/elements/swiper/swiper';
+
 import './styles.scss';
 
 import './styles/elements/burger';

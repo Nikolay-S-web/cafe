@@ -8,6 +8,8 @@
     }
 
     &__item {
+        text-shadow: 0 0 4px var(--secondBgColor);
+
         padding-inline: var(--inlinePadding);
         flex-shrink: 1;
         &--current {
@@ -22,7 +24,7 @@
             flex-direction: column;
         }
         &__item {
-            padding-block: var(--inlinePadding);
+            padding-block: 2px;
         }
     }
 }
@@ -46,6 +48,7 @@
             align-items: end;
         }
         &__item {
+            padding-block: 4px;
             padding-right: calc(var(--inlinePadding) * 8);
         }
     }

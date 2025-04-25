@@ -1,12 +1,12 @@
 .header {
-    --BgColor: #ffd5969c;
+    --BgColor: #ffd596e4;
     --blockPadding: 40px;
     --scrolledBlockPadding: 20px;
     --logoWidth: 150px;
     --logoHeight: calc(var(--logoWidth) / 5);
     --gap: calc(var(--inlinePadding) * 2);
 
-    display: none;
+    // display: none;
 
     position: fixed;
     z-index: 1;
@@ -15,6 +15,7 @@
     left: 0;
     padding-block: var(--blockPadding);
     transition: 0.5s;
+    z-index: 2;
 
     &.scrolled {
         padding-block: calc(var(--blockPadding) / 2);
@@ -54,25 +55,25 @@
 
 @media (max-width: 1440px) {
     .header {
-        --blockPadding: 30;
+        --blockPadding: 30px;
     }
 }
 
 @media (max-width: 1024px) {
     .header {
-        --blockPadding: 20;
+        --blockPadding: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .header {
-        --blockPadding: 15;
+        --blockPadding: 15px;
     }
 }
 
 @media (max-width: 600px) and (min-width: 426px) {
     .header {
-        --logoWidth: 240;
+        --logoWidth: 240px;
 
         &__shops {
             align-self: flex-start;
@@ -82,7 +83,7 @@
 
 @media (max-width: 425px) {
     .header {
-        --logoWidth: 200;
+        --logoWidth: 200px;
         background-color: var(--BgColor);
         transition: 0.5s;
 
@@ -99,6 +100,7 @@
             transform-origin: center top;
             transform: scaleY(0);
             transition: 0.5s;
+            padding-bottom: var(--blockPadding);
 
             &.active {
                 transform: scaleY(1);

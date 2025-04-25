@@ -1,4 +1,7 @@
 .card {
+    margin-inline: auto;
+    max-width: 355px;
+    max-height: 385px;
     &--popular {
         border-radius: 16px;
         border: 6px solid transparent;
@@ -11,8 +14,6 @@
         height: 100%;
         border-radius: 12px;
         background-color: #fff;
-        max-width: 355px;
-        max-height: 385px;
         padding-top: 22px;
         padding-inline: 18px;
         padding-bottom: 19px;

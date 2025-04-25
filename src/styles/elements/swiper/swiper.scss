@@ -1,0 +1,36 @@
+.swiper {
+    overflow: visible;
+
+    // &-pagination {
+    //     height: 30px;
+    //     width: 100%;
+    //     background-color: #ffffff46;
+    // }
+}
+
+.swiper-pagination {
+    z-index: 100;
+    bottom: 3px !important;
+}
+.swiper-pagination-bullet {
+    background: var(--secondaryColor);
+    opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    transition: 0.5s;
+    color: var(--secondaryColor);
+}
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-button-next {
+    right: 0;
+}
+
+swiper-button-disabled {
+    opacity: 0;
+}
