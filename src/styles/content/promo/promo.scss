@@ -1,9 +1,8 @@
 .promo {
     --gap: calc(var(--inlinePadding) * 2);
     --paddingTop: 160px;
-    --bgColor: var(--secondBgColor);
 
-    background-color: var(--bgColor);
+    background-color: var(--secondBgColor);
     position: relative;
 
     &__wrapper {
@@ -27,9 +26,14 @@
         &--bottom {
             position: relative;
             padding-bottom: 400px;
+            margin-bottom: 300px;
             width: 100%;
             // display: flow-root;
+            @media (max-width: 1440px) {
+                margin-bottom: 200px;
+            }
             @media (max-width: 1024px) {
+                margin-bottom: 150px;
             }
         }
     }
@@ -46,11 +50,9 @@
         display: grid;
         gap: 24px;
         align-content: center;
-        &__title,
-        &__text {
+        &__title {
             mix-blend-mode: luminosity;
-            text-combine-upright: all;
-            text-shadow: 0 0 4px var(--bgColor);
+            text-shadow: 0 0 4px var(--secondBgColor);
         }
         &__order {
             margin-top: 8px;
@@ -67,13 +69,13 @@
             &__button {
                 width: 170px;
                 height: 46px;
-                box-shadow: 0 0 4px var(--bgColor);
+                box-shadow: 0 0 4px var(--secondBgColor);
             }
             &__link {
                 color: var(--primaryColor);
                 text-decoration: none;
                 padding: 10px 24px;
-                text-shadow: 0 0 4px var(--bgColor);
+                text-shadow: 0 0 4px var(--secondBgColor);
             }
         }
     }
@@ -129,7 +131,7 @@
         &__title {
             padding-left: 50px;
             margin-block: 24px;
-            text-shadow: 0 0 4px var(--bgColor);
+            text-shadow: 0 0 4px var(--secondBgColor);
 
             @media (max-width: 1024px) {
                 padding-inline: 20px;

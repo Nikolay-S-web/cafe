@@ -1,5 +1,7 @@
 .popular-goods {
-    overflow-x: visible;
+    overflow: visible;
+    @extend .swiper;
+
     padding-inline: 64px;
     // display: flex;
     // gap: 10px;
@@ -9,6 +11,11 @@
     }
 
     &__wrapper {
+        @extend .swiper-wrapper;
+    }
+
+    &__slide {
+        @extend .swiper-slide;
     }
 
     &__card {
@@ -19,4 +26,38 @@
         //     }
         // }
     }
+}
+
+.popular-goods-pagination {
+    // @extend .swiper-pagination;
+    z-index: 100;
+    bottom: 3px !important;
+}
+.popular-goods-pagination-bullet {
+    // @extend .swiper-pagination-bullet;
+    background: var(--secondaryColor);
+    opacity: 0.5;
+}
+.popular-goods-pagination-bullet-active {
+    // @extend .swiper-pagination-bullet-active;
+    opacity: 1;
+}
+
+.popular-goods-button-prev,
+.popular-goods-button-next {
+    transition: 0.5s;
+    color: var(--primaryColor);
+}
+.popular-goods-button-prev {
+    // @extend .swiper-button-prev;
+    left: 0;
+}
+.popular-goods-button-next {
+    // @extend .swiper-button-next;
+    right: 0;
+}
+
+.popular-goods-button-disabled {
+    // @extend .swiper-button-disabled;
+    opacity: 0;
 }

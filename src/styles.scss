@@ -1,4 +1,6 @@
-@import './styles/elements/swiper/swiper.scss';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
 @import './styles/extentions.scss';
 
@@ -8,12 +10,17 @@
 @import './styles/elements/icon/icons.scss';
 @import './styles/elements/icon/icon-box.scss';
 @import './styles/elements/button.scss';
+@import './styles/elements/image.scss';
 @import './styles/elements/title.scss';
 @import './styles/elements/text.scss';
 @import './styles/elements/popular-goods/popular-goods.scss';
 @import './styles/elements/card/card.scss';
 
+@import './styles/components/about-galary/about-galary.scss';
+
 @import './styles/main.scss';
 
 @import './styles/header/header.scss';
 @import './styles/content/promo/promo.scss';
+@import './styles/content/about/about.scss';
+@import './styles/content/delivery-info/styles/delivery-info.scss';

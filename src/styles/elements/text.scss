@@ -3,7 +3,12 @@
     font-size: 18px;
     line-height: 1.5em;
     color: var(--lightColor);
-    text-wrap: balance;
+    &--balanced {
+        text-wrap: balance;
+    }
+    &--justifyed {
+        text-align: justify;
+    }
 
     &--button {
         font-weight: 600;

@@ -60,7 +60,9 @@ body {
     }
 }
 @media (max-width: 600px) {
-    .header {
+    :root {
+        --rootFontSize: 0.8rem;
+
         --inlineWrapperPadding: 10px;
     }
 }

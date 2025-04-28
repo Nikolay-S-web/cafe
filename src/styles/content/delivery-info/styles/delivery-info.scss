@@ -1,0 +1,33 @@
+// @use 'swiper/scss';
+
+.dilivery_info {
+    &__wrapper {
+        margin-block: 24px;
+        @extend %wrapper;
+    }
+    &__title {
+    }
+    &__procedure {
+    }
+    &-procedure {
+        @extend .swiper;
+
+        &__wrapper {
+            @extend .swiper-wrapper;
+        }
+        &__slide {
+            @extend .swiper-slide;
+        }
+    }
+}
+
+.procedure-slide {
+    &__image_box {
+        max-width: 160px;
+    }
+    &__title {
+    }
+
+    &__text {
+    }
+}
