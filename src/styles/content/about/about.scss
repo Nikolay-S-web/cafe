@@ -2,7 +2,7 @@
     background-color: var(--secondBgColor);
     display: flow-root;
     &__wrapper {
-        margin-block: 70px;
+        margin-block: 60px;
         padding-block: 26px;
         @extend %wrapper;
         display: grid;
@@ -15,7 +15,7 @@
         }
 
         @media (max-width: 1440px) {
-            margin-block: 60px;
+            margin-block: 55px;
             padding-block: 20px;
             row-gap: 40px;
             column-gap: 15px;

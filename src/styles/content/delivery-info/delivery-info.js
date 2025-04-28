@@ -1,17 +1,17 @@
 import Swiper from 'swiper';
 import { Mousewheel, Autoplay } from 'swiper/modules';
 
-const deliverySwiper = new Swiper('.dilivery_info-procedure', {
-    slideFullyVisibleClass: 'dilivery_info-procedure__slide-fully-visible',
-    eventsPrefix: 'dilivery_info-procedure',
-    wrapperClass: 'dilivery_info-procedure__wrapper',
-    slideClass: 'dilivery_info-procedure__slide',
-    containerModifierClass: 'dilivery_info-procedure__',
-    slideVisibleClass: 'dilivery_info-procedure__slide--visible',
-    slideActiveClass: 'dilivery_info-procedure__slide--active',
+const deliverySwiper = new Swiper('.delivery_info-procedure', {
+    slideFullyVisibleClass: 'delivery_info-procedure__slide-fully-visible',
+    eventsPrefix: 'delivery_info-procedure',
+    wrapperClass: 'delivery_info-procedure__wrapper',
+    slideClass: 'delivery_info-procedure__slide',
+    containerModifierClass: 'delivery_info-procedure__',
+    slideVisibleClass: 'delivery_info-procedure__slide--visible',
+    slideActiveClass: 'delivery_info-procedure__slide--active',
     modules: [Autoplay, Mousewheel],
     speed: 400,
-    spaceBetween: 20,
+    // spaceBetween: 20,
     slidesPerView: 1,
     watchSlidesProgress: true,
 

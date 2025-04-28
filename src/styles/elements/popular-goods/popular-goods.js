@@ -1,11 +1,11 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-const swiper = new Swiper('.popular-goods', {
+const popularGoods = new Swiper('.popular-goods', {
     slideFullyVisibleClass: 'popular-goods__slide-fully-visible',
     eventsPrefix: 'popular-goods',
     wrapperClass: 'popular-goods__wrapper',
-    slideClass: 'popular-goods-slide',
+    slideClass: 'popular-goods__slide',
     containerModifierClass: 'popular-goods__',
     slideVisibleClass: 'popular-goods__slide--visible',
     slideActiveClass: 'popular-goods__slide--active',
@@ -15,13 +15,15 @@ const swiper = new Swiper('.popular-goods', {
     slidesPerView: 1,
     watchSlidesProgress: true,
     pagination: {
-        el: '.popular-goods-pagination',
-        clickable: true, // возможность клика по пагинации
+        el: '.popular-goods__pagination',
+        clickable: true,
+        bulletClass: 'popular-goods__pagination-bullet',
+        bulletActiveClass: 'popular-goods__pagination-bullet-active',
     },
     navigation: {
         enabled: true,
-        nextEl: '.popular-goods-button-next',
-        prevEl: '.popular-goods-button-prev',
+        nextEl: '.popular-goods__button-next',
+        prevEl: '.popular-goods__button-prev',
     },
     autoplay: {
         delay: 5000,

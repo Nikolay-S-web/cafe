@@ -9,6 +9,8 @@ const swiperGalary = new Swiper('.about-galary', {
     containerModifierClass: 'about-galary__',
     slideVisibleClass: 'about-galary__slide--visible',
     slideActiveClass: 'about-galary__slide--active',
+    slideNextClass: 'about-galary__slide--next',
+    slidePrevClass: 'about-galary__slide--prev',
     modules: [Pagination, Autoplay, Mousewheel],
     speed: 400,
     spaceBetween: 20,
@@ -16,7 +18,9 @@ const swiperGalary = new Swiper('.about-galary', {
     watchSlidesProgress: true,
     pagination: {
         el: '.about-galary__pagination',
-        clickable: true, // возможность клика по пагинации
+        clickable: true,
+        bulletClass: 'about-galary__pagination-bullet',
+        bulletActiveClass: 'about-galary__pagination-bullet-active',
     },
 
     autoplay: {

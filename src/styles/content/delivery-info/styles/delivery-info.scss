@@ -1,13 +1,14 @@
-// @use 'swiper/scss';
-
-.dilivery_info {
+.delivery_info {
     &__wrapper {
-        margin-block: 24px;
         @extend %wrapper;
+        margin-block: 24px;
+        display: flow-root;
     }
     &__title {
+        margin-block: 15px;
     }
     &__procedure {
+        margin-block: 15px;
     }
     &-procedure {
         @extend .swiper;
@@ -22,6 +23,10 @@
 }
 
 .procedure-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     &__image_box {
         max-width: 160px;
     }
@@ -29,5 +34,19 @@
     }
 
     &__text {
+    }
+}
+
+.image_box__set {
+    position: relative;
+
+    & > *:last-child {
+        --size: 55%;
+        position: absolute;
+        width: var(--size);
+        height: var(--size);
+        object-fit: contain;
+        right: -15%;
+        bottom: -15%;
     }
 }
