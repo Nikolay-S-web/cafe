@@ -1,0 +1,50 @@
+.footer {
+    --logoWidth: 150px;
+    --logoHeight: calc(var(--logoWidth) / 5);
+
+    &__wrapper {
+    }
+    &__about {
+    }
+    &-about {
+        &__logo {
+            display: block;
+            height: var(--logoHeight);
+            width: var(--logoWidth);
+        }
+        &__text {
+        }
+    }
+
+    &__contacts {
+    }
+    &-contacts {
+        &__title {
+        }
+        &__address {
+        }
+    }
+    &__follow {
+    }
+    &-follow {
+        &__title {
+        }
+        &__links {
+        }
+    }
+
+    &__info {
+    }
+    &-info {
+        &__title {
+        }
+        &__navigation {
+        }
+        &-navigation {
+            &__list {
+            }
+            &__item {
+            }
+        }
+    }
+}
