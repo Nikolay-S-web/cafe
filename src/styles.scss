@@ -1,6 +1,7 @@
 @import 'swiper/scss';
 @import 'swiper/scss/navigation';
 @import 'swiper/scss/pagination';
+@import 'swiper/scss/grid';
 
 @import './styles/extentions.scss';
 
@@ -25,3 +26,4 @@
 @import './styles/content/about/about.scss';
 @import './styles/content/delivery-info/styles/delivery-info.scss';
 @import './styles/content/goods/goods.scss';
+@import './styles/content/goods/goods-galary/goods-galary.scss';

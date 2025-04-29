@@ -1,0 +1,95 @@
+// @use 'swiper/scss';
+
+.goods-galary {
+    --galaryHeight: 600px;
+
+    @extend .swiper;
+    @extend .swiper-grid;
+    // overflow: visible;
+
+    @media (max-width: 1440px) {
+        --galaryHeight: 500px;
+    }
+    @media (max-width: 768px) {
+        --galaryHeight: 400px;
+    }
+    @media (max-width: 425px) {
+        --galaryHeight: 300px;
+    }
+
+    &__wrapper {
+        @extend .swiper-wrapper;
+        row-gap: 20px;
+        align-content: normal;
+        align-items: stretch;
+
+        // height: var(--galaryHeight);
+        padding-bottom: 25px;
+    }
+    &__item {
+        @extend .swiper-slide;
+        height: 100%;
+    }
+    &-item {
+        display: flex;
+        gap: 24px;
+
+        @media (max-width: 1440px) {
+        }
+        @media (max-width: 1024px) {
+            gap: 18px;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+
+            gap: 12px;
+        }
+        @media (max-width: 425px) {
+        }
+
+        & > * {
+            border-radius: 16px;
+        }
+
+        &__title {
+            background-color: var(--accentsColor);
+
+            text-align: center;
+            align-content: center;
+            padding-inline: 30px;
+            padding-block: 30px;
+            @media (max-width: 1440px) {
+            }
+            @media (max-width: 1024px) {
+                padding-inline: 20px;
+                padding-block: 20px;
+            }
+            @media (max-width: 768px) {
+                padding-inline: 10px;
+                padding-block: 10px;
+            }
+            @media (max-width: 425px) {
+            }
+        }
+
+        &__image_box {
+            overflow: hidden;
+        }
+    }
+}
+
+.goods-galary__pagination {
+    @extend .swiper-pagination;
+    z-index: 100;
+    bottom: 0 !important;
+    text-align: center;
+}
+.goods-galary__pagination-bullet {
+    @extend .swiper-pagination-bullet;
+    background-color: var(--secondaryColor);
+    opacity: 0.5;
+}
+.goods-galary__pagination-bullet-active {
+    @extend .swiper-pagination-bullet-active;
+    opacity: 1;
+}

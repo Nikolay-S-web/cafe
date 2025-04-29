@@ -1,29 +1,33 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay, Grid } from 'swiper/modules';
 
-const popularGoods = new Swiper('.popular-goods', {
-    slideFullyVisibleClass: 'popular-goods__slide-fully-visible',
-    eventsPrefix: 'popular-goods',
-    wrapperClass: 'popular-goods__wrapper',
-    slideClass: 'popular-goods__slide',
-    containerModifierClass: 'popular-goods__',
-    slideVisibleClass: 'popular-goods__slide--visible',
-    slideActiveClass: 'popular-goods__slide--active',
-    modules: [Navigation, Pagination, Autoplay],
+const goodsGalary = new Swiper('.goods-galary', {
+    slideFullyVisibleClass: 'goods-galary__item-fully-visible',
+    eventsPrefix: 'goods-galary',
+    wrapperClass: 'goods-galary__wrapper',
+    slideClass: 'goods-galary__item',
+    containerModifierClass: 'goods-galary__',
+    slideVisibleClass: 'goods-galary__item--visible',
+    slideActiveClass: 'goods-galary__item--active',
+    modules: [Navigation, Pagination, Autoplay, Grid],
+    grid: {
+        fill: 'row',
+        rows: 2,
+    },
     speed: 400,
     spaceBetween: 20,
     slidesPerView: 1,
     watchSlidesProgress: true,
     pagination: {
-        el: '.popular-goods__pagination',
+        el: '.goods-galary__pagination',
         clickable: true,
-        bulletClass: 'popular-goods__pagination-bullet',
-        bulletActiveClass: 'popular-goods__pagination-bullet-active',
+        bulletClass: 'goods-galary__pagination-bullet',
+        bulletActiveClass: 'goods-galary__pagination-bullet-active',
     },
     navigation: {
         enabled: true,
-        nextEl: '.popular-goods__button-next',
-        prevEl: '.popular-goods__button-prev',
+        nextEl: '.goods-galary__button-next',
+        prevEl: '.goods-galary__button-prev',
     },
     autoplay: {
         delay: 5000,
