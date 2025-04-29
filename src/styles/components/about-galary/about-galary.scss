@@ -1,14 +1,14 @@
 // @use 'swiper/scss';
 
 .about-galary {
-    --galaryHeight: 500px;
+    --galaryHeight: 600px;
     @extend .swiper;
 
     @media (max-width: 1440px) {
-        --galaryHeight: 400px;
+        --galaryHeight: 500px;
     }
     @media (max-width: 768px) {
-        --galaryHeight: 300px;
+        --galaryHeight: 400px;
     }
     @media (max-width: 425px) {
         --galaryHeight: 300px;

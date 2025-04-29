@@ -1,0 +1,6 @@
+.goods {
+    &__wrapper {
+        @extend %wrapper;
+        margin-block: 100px;
+    }
+}
