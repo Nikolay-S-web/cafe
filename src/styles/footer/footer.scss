@@ -1,8 +1,15 @@
 .footer {
-    --logoWidth: 150px;
+    --logoWidth: 180px;
     --logoHeight: calc(var(--logoWidth) / 5);
 
+    background-color: var(--secondBgColor);
+
     &__wrapper {
+        @extend %wrapper;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        padding-block: 88px;
     }
     &__about {
     }
@@ -11,6 +18,7 @@
             display: block;
             height: var(--logoHeight);
             width: var(--logoWidth);
+            margin-bottom: 24px;
         }
         &__text {
         }
@@ -30,6 +38,11 @@
         &__title {
         }
         &__links {
+            display: flex;
+        }
+        &__logo {
+            flex-shrink: 0;
+            display: flex;
         }
     }
 
