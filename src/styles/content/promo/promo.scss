@@ -50,9 +50,16 @@
         display: grid;
         gap: 24px;
         align-content: center;
+
         &__title {
-            mix-blend-mode: luminosity;
+            justify-self: start;
+            align-self: start;
+            // max-width: 80%;
+            // max-width: 90%;
             text-shadow: 0 0 4px var(--secondBgColor);
+            @media (max-width: 425px) {
+                max-width: unset;
+            }
         }
         &__order {
             margin-top: 8px;

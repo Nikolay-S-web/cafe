@@ -32,7 +32,10 @@
     @extend .swiper-pagination;
     z-index: 100;
     bottom: 7px !important;
-    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: 5px;
 }
 .popular-goods__pagination-bullet {
     @extend .swiper-pagination-bullet;

@@ -8,6 +8,7 @@
         @extend %wrapper;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
         grid-auto-flow: dense row;
         gap: 24px;
         padding-block: 88px;
