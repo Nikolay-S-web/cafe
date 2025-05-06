@@ -6,7 +6,7 @@ import 'swiper/scss/grid';
 
 import './styles/elements/popular-goods/popular-goods';
 import './styles/components/about-galary/about-galary';
-import './styles/components/accent/accent';
+import './styles/components/title/title__accent/title__accent';
 import './styles/content/delivery-info/delivery-info';
 import './styles/content/goods/goods-galary/goods-galary';
 
