@@ -1,5 +1,45 @@
+@keyframes button {
+    from {
+        scale: 1;
+        outline: 2px solid transparent;
+        outline-offset: 0;
+    }
+
+    50% {
+        scale: 1.05;
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+
+    to {
+        scale: 1;
+        outline: 2px solid transparent;
+        outline-offset: 0;
+    }
+}
+
 .button {
+    position: relative;
+    --animation-duration: 1s;
+
     cursor: pointer;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -10px;
+        border-radius: inherit;
+    }
+
+    &.active {
+        animation: button var(--animation-duration);
+    }
+
+    @media (any-pointer: fine) {
+        // &:hover {
+        //     animation: button 1s;
+        //     // scale: 1.1;
+        // }
+    }
 
     &--style_unset {
         height: 100%;
@@ -22,9 +62,13 @@
         }
     }
 
+    &__shape_round {
+        border-radius: 50%;
+    }
+
     &__icon-box {
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
         background-color: var(--primaryColor);
         border-radius: 50%;
         aspect-ratio: 1;

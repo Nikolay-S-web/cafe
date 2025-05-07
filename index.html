@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -17,9 +21,9 @@
             </a>
             <div class="header__navigation navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item navigation__item--current"><a href="" class="link">Главная</a></li>
-                    <li class="navigation__item"><a href="" class="link">Меню</a></li>
-                    <li class="navigation__item"><a href="" class="link">Контакты</a></li>
+                    <li class="navigation__item navigation__item--current"><a href="/index.html" class="link">Главная</a></li>
+                    <li class="navigation__item"><a href="#menu" class="link">Меню</a></li>
+                    <li class="navigation__item"><a href="#contacts" class="link">Контакты</a></li>
                 </ul>
             </div>
 
@@ -58,7 +62,7 @@
                                 </svg>
                             </div>
                         </button>
-                        <a href="" class="promo-intro-order__link">More menu</a>
+                        <a href="#menu" class="promo-intro-order__link link">More menu</a>
                     </div>
 
                 </section>
@@ -91,7 +95,7 @@
                                                 <span class="card-description-mods__item text text--balanced text--mode">hot</span>
                                                 <span class="card-description-mods__item text text--balanced text--mode">cold</span>
                                             </div>
-                                            <button class="card-description__button card-description-button button button--style_unset">
+                                            <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                                 <div class="card-description-button__icon-box icon-box">
                                                     <svg class="icon icon--basket">
                                                         <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -120,7 +124,7 @@
                                                 <span class="card-description-mods__item text text--balanced text--mode">hot</span>
                                                 <span class="card-description-mods__item text text--balanced text--mode">cold</span>
                                             </div>
-                                            <button class="card-description__button card-description-button button button--style_unset">
+                                            <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                                 <div class="card-description-button__icon-box icon-box">
                                                     <svg class="icon icon--basket">
                                                         <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -148,7 +152,7 @@
                                                 <span class="card-description-mods__item text text--balanced text--mode">hot</span>
                                                 <span class="card-description-mods__item text text--balanced text--mode">cold</span>
                                             </div>
-                                            <button class="card-description__button card-description-button button button--style_unset">
+                                            <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                                 <div class="card-description-button__icon-box icon-box">
                                                     <svg class="icon icon--basket">
                                                         <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -217,34 +221,42 @@
                 <section class="delivery_info__procedure delivery_info-procedure">
                     <div class="delivery_info-procedure__wrapper">
 
-                        <div class="delivery_info-procedure__slide procedure-slide">
-                            <div class="procedure-slide__image_box image_box">
-                                <div class="image_box__set">
+                        <article class="delivery_info-procedure__slide procedure-slide">
+                            <div class="procedure-slide__wrapper">
+                                <div class="procedure-slide__image_box image_box">
+                                    <div class="image_box__set">
 
-                                    <img src="./src/styles/content/delivery-info/images/choose/coffee-cup 1.png" alt="coffee cup" class="image">
-                                    <img src="./src/styles/content/delivery-info/images/choose/tap 1.png" alt="tap" class="image">
+                                        <img src="./src/styles/content/delivery-info/images/choose/coffee-cup 1.png" alt="coffee cup" class="image">
+                                        <img src="./src/styles/content/delivery-info/images/choose/tap 1.png" alt="tap" class="image">
 
+                                    </div>
                                 </div>
+                                <h3 class="procedure-slide__title title title--size_s">choose your coffee</h3>
+                                <p class="procedure-slide__text text">there are 20+ coffees for you</p>
                             </div>
-                            <h3 class="procedure-slide__title title title--size_s">choose your coffee</h3>
-                            <p class="procedure-slide__text text">there are 20+ coffees for you</p>
-                        </div>
+                        </article>
 
-                        <div class="delivery_info-procedure__slide procedure-slide">
-                            <div class="procedure-slide__image_box">
-                                <img src="./src/styles/content/delivery-info/images/deliverance/food-truck 1.png" alt="food truck" class="image">
-                            </div>
-                            <h3 class="procedure-slide__title title title--size_s">we delivery it to you</h3>
-                            <p class="procedure-slide__text text">Choose delivery service</p>
-                        </div>
+                        <article class="delivery_info-procedure__slide procedure-slide">
+                            <div class="procedure-slide__wrapper">
 
-                        <div class="delivery_info-procedure__slide procedure-slide">
-                            <div class="procedure-slide__image_box">
-                                <img src="./src/styles/content/delivery-info/images/finish/coffee-cup 2.png" alt="coffee cup" class="image">
+                                <div class="procedure-slide__image_box">
+                                    <img src="./src/styles/content/delivery-info/images/deliverance/food-truck 1.png" alt="food truck" class="image">
+                                </div>
+                                <h3 class="procedure-slide__title title title--size_s">we delivery it to you</h3>
+                                <p class="procedure-slide__text text">Choose delivery service</p>
                             </div>
-                            <h3 class="procedure-slide__title title title--size_s">Enjoy your coffee</h3>
-                            <p class="procedure-slide__text text">Choose delivery service</p>
-                        </div>
+                        </article>
+
+                        <article class="delivery_info-procedure__slide procedure-slide">
+                            <div class="procedure-slide__wrapper">
+
+                                <div class="procedure-slide__image_box">
+                                    <img src="./src/styles/content/delivery-info/images/finish/coffee-cup 2.png" alt="coffee cup" class="image">
+                                </div>
+                                <h3 class="procedure-slide__title title title--size_s">Enjoy your coffee</h3>
+                                <p class="procedure-slide__text text">Choose delivery service</p>
+                            </div>
+                        </article>
 
                     </div>
                 </section>
@@ -252,7 +264,7 @@
             </div>
         </section>
 
-        <section class="goods">
+        <section id="menu" class="goods">
             <div class="goods__wrapper">
                 <h2 class="goods__title title title--size_m">Special menu for <span class="title__accent">you</span></h2>
                 <div class="goods__galary goods-galary">
@@ -272,7 +284,7 @@
                                         <div class="card-description__mods card-description-mods">
                                             <p class="card-description-mods__text text text--balanced">bread with meat and vegetables</p>
                                         </div>
-                                        <button class="card-description__button card-description-button button button--style_unset">
+                                        <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                             <div class="card-description-button__icon-box icon-box">
                                                 <svg class="icon icon--basket">
                                                     <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -298,7 +310,7 @@
                                         <div class="card-description__mods card-description-mods">
                                             <p class="card-description-mods__text text text--balanced">Hot Milk with less sugar</p>
                                         </div>
-                                        <button class="card-description__button card-description-button button button--style_unset">
+                                        <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                             <div class="card-description-button__icon-box icon-box">
                                                 <svg class="icon icon--basket">
                                                     <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -324,7 +336,7 @@
                                         <div class="card-description__mods card-description-mods">
                                             <p class="card-description-mods__text text text--balanced">Coffe with ice cream vanilla</p>
                                         </div>
-                                        <button class="card-description__button card-description-button button button--style_unset">
+                                        <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                             <div class="card-description-button__icon-box icon-box">
                                                 <svg class="icon icon--basket">
                                                     <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -350,7 +362,7 @@
                                         <div class="card-description__mods card-description-mods">
                                             <p class="card-description-mods__text text text--balanced">Hot Cappucino</p>
                                         </div>
-                                        <button class="card-description__button card-description-button button button--style_unset">
+                                        <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                             <div class="card-description-button__icon-box icon-box">
                                                 <svg class="icon icon--basket">
                                                     <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -376,7 +388,7 @@
                                         <div class="card-description__mods card-description-mods">
                                             <p class="card-description-mods__text text text--balanced">Hot Moccacino</p>
                                         </div>
-                                        <button class="card-description__button card-description-button button button--style_unset">
+                                        <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                             <div class="card-description-button__icon-box icon-box">
                                                 <svg class="icon icon--basket">
                                                     <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -402,7 +414,7 @@
                                         <div class="card-description__mods card-description-mods">
                                             <p class="card-description-mods__text text text--balanced">Waffle Ice Crem</p>
                                         </div>
-                                        <button class="card-description__button card-description-button button button--style_unset">
+                                        <button class="card-description__button card-description-button button button__shape_round button--style_unset">
                                             <div class="card-description-button__icon-box icon-box">
                                                 <svg class="icon icon--basket">
                                                     <use xlink:href="./__spritemap#sprite-basket1"></use>
@@ -441,7 +453,7 @@
 
             </section>
 
-            <section class="footer__contacts footer-contacts">
+            <section id="contacts" class="footer__contacts footer-contacts">
 
                 <h3 class="footer-contacts__title title title--size_s title--footer">Contact us</h3>
                 <address class="footer-contacts__address text">9 Nicholas Croft, Northern Quarter, Manchester, M4 1EY</address>
@@ -453,17 +465,17 @@
 
                 <h3 class="footer-follow__title title title--size_s title--footer">Follow us on</h3>
                 <div class="footer-follow__links">
-                    <a href="" class="footer-follow__logo">
+                    <a href="" class="footer-follow__link link">
                         <svg class="icon icon--sotial">
                             <use xlink:href="./__spritemap#sprite-instagram"></use>
                         </svg>
                     </a>
-                    <a href="" class="footer-follow__logo">
+                    <a href="" class="footer-follow__link link">
                         <svg class="icon icon--sotial">
                             <use xlink:href="./__spritemap#sprite-tiktok"></use>
                         </svg>
                     </a>
-                    <a href="" class="footer-follow__logo">
+                    <a href="" class="footer-follow__link link">
                         <svg class="icon icon--sotial">
                             <use xlink:href="./__spritemap#sprite-youtube"></use>
                         </svg>

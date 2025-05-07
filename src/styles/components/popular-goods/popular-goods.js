@@ -1,4 +1,7 @@
 import Swiper from 'swiper';
+
+import './popular-goods.scss';
+
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const popularGoods = new Swiper('.popular-goods', {

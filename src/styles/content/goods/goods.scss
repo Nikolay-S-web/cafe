@@ -1,7 +1,8 @@
 .goods {
     &__wrapper {
         @extend %wrapper;
-        margin-block: 100px;
+        margin-block: 20px;
+        padding-block: 50px;
         overflow: hidden;
     }
     &__title {

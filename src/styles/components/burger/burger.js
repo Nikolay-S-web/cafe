@@ -1,3 +1,5 @@
+import './burger.scss';
+
 const burger = document.querySelector('.burger');
 const parent = burger.parentElement;
 const navigation = parent.querySelector('.navigation');
@@ -15,7 +17,6 @@ burger.addEventListener('click', burgerToggleHandler);
 
 function handleClickOutside(event) {
     if (!parent.contains(event.target)) {
-        console.log('Клик мимо элемента!');
         burgerCloseHandler();
     }
 }

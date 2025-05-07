@@ -1,0 +1,26 @@
+.icon {
+    width: var(--iconSize);
+    height: var(--iconSize);
+    transition: 0.3s;
+    &--basket {
+        stroke: white;
+        stroke-width: 3px;
+    }
+    &--sotial {
+        fill: var(--secondaryColor);
+
+        .link:active & {
+            fill: var(--primaryColor);
+        }
+        @media screen and (any-hover: hover) {
+            .link:hover & {
+                fill: var(--primaryColor);
+            }
+        }
+    }
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}

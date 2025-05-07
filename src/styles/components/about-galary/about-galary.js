@@ -1,3 +1,5 @@
+import './about-galary.scss';
+
 import Swiper from 'swiper';
 import { Mousewheel, Pagination, Autoplay } from 'swiper/modules';
 
@@ -24,31 +26,14 @@ const swiperGalary = new Swiper('.about-galary', {
     },
 
     autoplay: {
-        delay: 5000,
+        delay: 10000,
         pauseOnMouseEnter: true,
     },
-    // breakpoints: {
-    //     // 425: {
-    //     //     slidesPerView: 1, // Для мобильных устройств
-    //     // },
-    //     600: {
-    //         slidesPerView: 2, // Для планшетов
-    //     },
-    //     // 1024: {
-    //     //     slidesPerView: 2, // Для десктопов
-    //     // },
-    //     1200: {
-    //         slidesPerView: 3, // Для больших экранов
-    //     },
-    // },
-    mousewheel: true,
 });
 
 function watchIn(entries, observer) {
     entries.forEach((entry) => {
         if (!entry.isIntersecting) {
-            console.log('no');
-            // swiperGalary.pause();
             swiperGalary.autoplay.pause();
         } else {
             swiperGalary.autoplay.resume();

@@ -1,67 +1,64 @@
 .title {
-    --beroreContent: '';
-    --maskWidth: '';
-    --maskStop: '';
-    --titleWidth: '';
-
     position: relative;
     line-height: 1.5em;
     font-weight: 600;
     color: var(--secondaryColor);
     text-wrap: balance;
-    // overflow: hidden;
+
+    &:has(.title__accent) {
+        overflow: hidden;
+        width: fit-content;
+    }
 
     &__accent {
         display: inline-block;
+        position: relative;
+        &::before {
+            position: absolute;
+            overflow: visible;
+            transition: 1.5s;
+        }
     }
 
-    width: fit-content;
     &--size_l {
         font-size: 48px;
         letter-spacing: 0.01em;
-        &::before {
+
+        & .title__accent::before {
+            white-space: pre;
             content: var(--beroreContent);
             text-align: inherit;
-            letter-spacing: inherit;
-            width: 100%;
-            position: absolute;
-            display: inline;
-            left: 0;
+            width: fit-content;
+            right: 0;
             top: 0;
             color: var(--primaryColor);
             mask-image: linear-gradient(to right, var(--primaryColor), var(--primaryColor));
-            mask-origin: content-box;
-            mask-position: -500px 0;
+            mask-position: var(--maskStart);
             mask-size: var(--maskWidth) 1lh;
             mask-repeat: no-repeat;
-            // mask-clip: text;
-            // background-blend-mode: darken;
-
-            transition: 1.5s;
         }
 
-        &.active::before {
-            mask-position: var(--maskStop) 0;
+        &.active .title__accent::before {
+            mask-position: 100%;
         }
     }
     &--size_m {
         font-size: 32px;
         letter-spacing: 0.05em;
 
-        &::before {
+        & .title__accent::before {
             content: '';
-            position: absolute;
             bottom: 0;
-            width: var(--maskWidth);
+            width: var(--beforeWidth);
             background-color: var(--primaryColor);
             height: 0.2em;
             border-radius: 0.2em;
-            transition: 1.5s;
-            left: calc(-1 * var(--maskWidth));
+
+            left: var(--beforeStart);
         }
 
-        &.active::before {
-            left: var(--maskStop);
+        &.active .title__accent::before {
+            left: 0;
         }
     }
     &--size_s {

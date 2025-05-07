@@ -12,9 +12,11 @@
             background-image: url('/src/styles/content/promo/bg_right.png');
             background-repeat: no-repeat;
             background-position: right 4px top;
+            background-size: auto;
             display: flex;
             align-content: center;
             justify-content: space-between;
+            background-clip: border-box;
 
             @media (max-width: 1024px) {
                 --paddingTop: 150px;

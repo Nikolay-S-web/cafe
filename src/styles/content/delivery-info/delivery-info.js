@@ -33,14 +33,11 @@ const deliverySwiper = new Swiper('.delivery_info-procedure', {
         //         slidesPerView: 3, // Для больших экранов
         //     },
     },
-    mousewheel: true,
 });
 
 function watchIn(entries, observer) {
     entries.forEach((entry) => {
         if (!entry.isIntersecting) {
-            console.log('no');
-            // swiperGalary.pause();
             deliverySwiper.autoplay.pause();
         } else {
             deliverySwiper.autoplay.resume();
