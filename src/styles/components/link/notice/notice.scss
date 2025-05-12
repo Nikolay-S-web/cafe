@@ -1,0 +1,20 @@
+.notice {
+    padding: 5px 10px;
+    width: fit-content;
+    margin-inline: auto;
+    position: fixed;
+    transition: 1s;
+    opacity: 0;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border: 2px solid currentColor;
+    border-radius: 10px;
+    background-color: rgb(222, 222, 222);
+    z-index: 10;
+
+    &.active {
+        opacity: 1;
+    }
+}
