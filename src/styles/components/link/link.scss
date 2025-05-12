@@ -3,6 +3,10 @@
     color: inherit;
     text-decoration: none;
     transition-duration: 0.3s;
+    &--current {
+        color: var(--primaryColor);
+    }
+
     &::before {
         content: '';
         position: absolute;

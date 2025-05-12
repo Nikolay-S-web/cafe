@@ -1,10 +1,12 @@
 import './navigation.scss';
 
-// const links = document.querySelectorAll('.link');
+// const navigation= document.querySelectorAll('.navigation')
+// const navigationLinks = navigation.querySelectorAll('.link');
 // const currentPageUrl = window.location.href;
 
-// links.forEach((link) => {
-//     if (link.href === currentUrl) {
+// navigationLinks.forEach((link) => {
+//     const parentNavigationItem = link.closest('.navigation__item')
+//     if (navigationLinks.href === currentUrl) {
 //         link.classList.add('link--current'); // Добавляем класс, если совпадает
 //     }
 // });
