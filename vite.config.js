@@ -21,9 +21,6 @@ export default defineConfig({
         sourcemap: true,
     },
     plugins: [
-        ghPages({
-            branch: 'gh-pages',
-        }),
         VitePluginSvgSpritemap('./src/assets/SVG/*.svg'),
         htmlPurge(),
         ViteMinifyPlugin(),
@@ -59,6 +56,9 @@ export default defineConfig({
                     jpg: { quality: 80 },
                 },
             }),
+        }),
+        ghPages({
+            branch: 'gh-pages',
         }),
     ],
     css: {

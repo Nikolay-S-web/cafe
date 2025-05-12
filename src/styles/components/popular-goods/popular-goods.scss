@@ -37,8 +37,8 @@
     @extend .swiper-pagination;
     z-index: 100;
     bottom: 7px !important;
-    left: 0;
-    right: 0;
+    left: 0 !important;
+    right: 0 !important;
     justify-content: center;
     display: flex;
     gap: 5px;
