@@ -31,7 +31,7 @@ export default defineConfig({
         sentryVitePlugin({
             project: process.env.SENTRY_PROJECT,
             sourcemaps: {
-                include: './dist',
+                include: '/dist',
                 urlPrefix: '~/',
             },
         }),

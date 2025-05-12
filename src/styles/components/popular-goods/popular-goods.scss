@@ -37,8 +37,9 @@
     @extend .swiper-pagination;
     z-index: 100;
     bottom: 7px !important;
+    left: 0;
+    right: 0;
     justify-content: center;
-    width: 100%;
     display: flex;
     gap: 5px;
 }
