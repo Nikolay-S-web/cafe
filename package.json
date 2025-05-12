@@ -28,6 +28,7 @@
         "postcss-pxtorem": "^6.1.0",
         "reset-css": "^5.0.2",
         "swiper": "^11.2.6",
+        "vite-plugin-gh-pages": "^1.0.1",
         "vite-plugin-html": "^3.2.2",
         "vite-plugin-minify": "^2.1.0",
         "vite-plugin-purgecss": "^0.2.13"
